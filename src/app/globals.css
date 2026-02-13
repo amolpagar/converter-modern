@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}
+
+@layer components {
+  /* Code editor overrides for better visual integration */
+  .cm-editor {
+    @apply !bg-gray-50 dark:!bg-gray-900;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+  }
+
+  .cm-editor .cm-gutters {
+    @apply !bg-gray-100 dark:!bg-gray-800/60 !border-gray-200 dark:!border-gray-700;
+  }
+
+  .cm-editor .cm-activeLineGutter {
+    @apply !bg-gray-200 dark:!bg-gray-700;
+  }
+
+  .cm-editor .cm-activeLine {
+    @apply !bg-brand-50/50 dark:!bg-brand-950/20;
+  }
+
+  .cm-editor .cm-placeholder {
+    @apply !text-gray-400 dark:!text-gray-600;
+  }
+
+  /* Selection colors */
+  .cm-editor .cm-selectionBackground {
+    @apply !bg-brand-200/50 dark:!bg-brand-800/30;
+  }
+
+  .cm-editor.cm-focused .cm-selectionBackground {
+    @apply !bg-brand-200/70 dark:!bg-brand-800/50;
+  }
+
+  /* Tool card hover effect */
+  .tool-card {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+
+  .tool-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity duration-300 rounded-xl;
+  }
+
+  .tool-card:hover::before {
+    @apply opacity-5;
+  }
+
+  .tool-card:hover {
+    @apply -translate-y-1 shadow-lg;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 6s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-600;
+}
+
+/* Sonner toast customization */
+[data-sonner-toaster] {
+  --normal-bg: theme(colors.white);
+  --normal-text: theme(colors.gray.900);
+  --normal-border: theme(colors.gray.200);
+}
+
+.dark [data-sonner-toaster] {
+  --normal-bg: theme(colors.gray.800);
+  --normal-text: theme(colors.gray.100);
+  --normal-border: theme(colors.gray.700);
+}
