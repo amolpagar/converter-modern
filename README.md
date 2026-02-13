@@ -1,4 +1,4 @@
-# DevToolBox — Free Online Developer Tools
+# CodeMash — Free Online Developer Tools
 
 A modern, fast, and privacy-first suite of developer tools built with Next.js 14, TypeScript, and Tailwind CSS. Designed for Vercel deployment.
 

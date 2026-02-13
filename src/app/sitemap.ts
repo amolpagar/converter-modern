@@ -20,7 +20,7 @@ const HIGH_PRIORITY_TOOLS = new Set([
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://devtoolbox.com';
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://codemash.pro';
   const now = new Date();
 
   // Static pages

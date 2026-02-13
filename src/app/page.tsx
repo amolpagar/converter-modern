@@ -108,13 +108,13 @@ export default function HomePage() {
   const decoders = getToolsByCategory('decoder');
   const utilities = getToolsByCategory('utility');
 
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://devtoolbox.com';
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://codemash.pro';
 
   // Schema 1: Organization — establishes brand entity
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'DevToolBox',
+    name: 'CodeMash',
     url: appUrl,
     logo: `${appUrl}/icon-512.png`,
     description:
@@ -126,7 +126,7 @@ export default function HomePage() {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'DevToolBox',
+    name: 'CodeMash',
     url: appUrl,
     description:
       'Free, fast, privacy-first developer tools. JSON formatter, XML to JSON converter, Base64 decoder, JWT decoder, SQL formatter, and more.',
@@ -251,7 +251,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Why Developers Love DevToolBox
+              Why Developers Love CodeMash
             </h2>
             <p className="mt-3 text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
               Built by developers, for developers. Every tool is designed to
@@ -293,7 +293,7 @@ export default function HomePage() {
         <div className="prose dark:prose-invert max-w-3xl mx-auto">
           <h2>Free Online Developer Tools — JSON Formatter, Converters & More</h2>
           <p>
-            DevToolBox is your all-in-one suite of <strong>free online developer tools</strong>.
+            CodeMash is your all-in-one suite of <strong>free online developer tools</strong>.
             Whether you need a <Link href="/format-json">JSON formatter</Link> to beautify minified JSON,
             an <Link href="/xml-to-json">XML to JSON converter</Link> to transform data, or a{' '}
             <Link href="/jwt-decoder">JWT decoder</Link> to inspect token claims — our 25+ tools handle it
@@ -351,9 +351,9 @@ export default function HomePage() {
 
           <h3>100% Private — Your Data Never Leaves Your Browser</h3>
           <p>
-            Every tool on DevToolBox runs entirely in your browser using client-side JavaScript.
+            Every tool on CodeMash runs entirely in your browser using client-side JavaScript.
             Your data is never sent to any server, never logged, and never stored. This makes
-            DevToolBox the safest choice for handling sensitive data like API keys, JWT tokens,
+            CodeMash the safest choice for handling sensitive data like API keys, JWT tokens,
             configuration files, and proprietary code. No cookies, no tracking, no accounts —
             just fast, private developer tools that work.
           </p>

@@ -36,7 +36,7 @@ export function Header() {
               <Wrench className="w-5 h-5 text-white" />
             </div>
             <span>
-              Dev<span className="text-brand-500">ToolBox</span>
+              Code<span className="text-brand-500">Mash</span>
             </span>
           </Link>
 

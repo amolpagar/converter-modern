@@ -516,7 +516,7 @@ console.log(greeting);
 
 > This is a blockquote.
 
-Visit [DevToolBox](https://devtoolbox.com) for more tools.`,
+Visit [CodeMash](https://codemash.pro) for more tools.`,
     outputPlaceholder: 'Converted HTML will appear here...',
     icon: 'Heading',
     gradient: 'from-purple-500 to-violet-500',
@@ -553,7 +553,7 @@ Visit [DevToolBox](https://devtoolbox.com) for more tools.`,
   <p>This is a blockquote.</p>
 </blockquote>
 
-<p>Visit <a href="https://devtoolbox.com">DevToolBox</a> for more tools.</p>`,
+<p>Visit <a href="https://codemash.pro">CodeMash</a> for more tools.</p>`,
     outputPlaceholder: 'Converted Markdown will appear here...',
     icon: 'Heading',
     gradient: 'from-violet-500 to-purple-500',

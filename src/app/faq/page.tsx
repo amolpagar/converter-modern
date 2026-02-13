@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { ChevronDown } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'FAQ — Frequently Asked Questions About DevToolBox',
+  title: 'FAQ — Frequently Asked Questions About CodeMash',
   description:
-    'Frequently asked questions about DevToolBox free online developer tools. Learn about privacy, supported formats (JSON, XML, YAML, CSV, SQL), features, and more.',
+    'Frequently asked questions about CodeMash free online developer tools. Learn about privacy, supported formats (JSON, XML, YAML, CSV, SQL), features, and more.',
   alternates: {
     canonical: '/faq',
   },
@@ -15,20 +15,20 @@ const faqs = [
     category: 'General',
     items: [
       {
-        q: 'What is DevToolBox?',
-        a: 'DevToolBox is a free suite of 25+ online developer tools including a JSON formatter, XML to JSON converter, Base64 encoder/decoder, JWT decoder, SQL formatter, CSV converter, hash generator, diff checker, and more. All tools run in your browser for maximum speed and privacy.',
+        q: 'What is CodeMash?',
+        a: 'CodeMash is a free suite of 25+ online developer tools including a JSON formatter, XML to JSON converter, Base64 encoder/decoder, JWT decoder, SQL formatter, CSV converter, hash generator, diff checker, and more. All tools run in your browser for maximum speed and privacy.',
       },
       {
         q: 'Do I need to create an account?',
         a: 'No. All tools work without sign-up, registration, or login. Just open any tool and start using it right away — completely free.',
       },
       {
-        q: 'Is DevToolBox really free?',
+        q: 'Is CodeMash really free?',
         a: 'Yes! All 25+ tools are completely free with no usage limits, no premium tiers, and no hidden fees. We sustain the site through non-intrusive advertising.',
       },
       {
-        q: 'How is DevToolBox different from other online tools?',
-        a: 'DevToolBox processes everything in your browser (client-side JavaScript). Unlike most alternatives, your data is never sent to any server. This means faster results, complete privacy, and no file size restrictions imposed by server upload limits.',
+        q: 'How is CodeMash different from other online tools?',
+        a: 'CodeMash processes everything in your browser (client-side JavaScript). Unlike most alternatives, your data is never sent to any server. This means faster results, complete privacy, and no file size restrictions imposed by server upload limits.',
       },
     ],
   },
@@ -121,7 +121,7 @@ const faqs = [
       },
       {
         q: 'Do you offer an API?',
-        a: 'We are working on public API access. Contact us if you are interested in integrating DevToolBox tools into your workflow.',
+        a: 'We are working on public API access. Contact us if you are interested in integrating CodeMash tools into your workflow.',
       },
       {
         q: 'Can I embed these tools in my website?',
@@ -158,7 +158,7 @@ export default function FaqPage() {
             Frequently Asked Questions
           </h1>
           <p className="mt-4 text-gray-600 dark:text-gray-400">
-            Everything you need to know about DevToolBox.
+            Everything you need to know about CodeMash.
           </p>
         </div>
 

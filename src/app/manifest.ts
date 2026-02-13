@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'DevToolBox — Free Online Developer Tools',
-    short_name: 'DevToolBox',
+    name: 'CodeMash — Free Online Developer Tools',
+    short_name: 'CodeMash',
     description:
       'Free, fast, privacy-first developer tools. JSON formatter, XML converter, Base64 decoder, JWT decoder, SQL formatter, and 25+ more tools — all in your browser.',
     start_url: '/',

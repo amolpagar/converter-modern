@@ -34,7 +34,7 @@ export function Footer() {
               <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center">
                 <Wrench className="w-4 h-4 text-white" />
               </div>
-              Dev<span className="text-brand-500">ToolBox</span>
+              Code<span className="text-brand-500">Mash</span>
             </Link>
             <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
               Free, fast, and private developer tools. Convert, format, and
@@ -60,7 +60,7 @@ export function Footer() {
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="mailto:hello@devtoolbox.com"
+                href="mailto:hello@codemash.pro"
                 className="p-2 text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
                 aria-label="Email"
               >
@@ -140,7 +140,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-gray-200 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-500">
-            &copy; {new Date().getFullYear()} DevToolBox. All rights reserved.
+            &copy; {new Date().getFullYear()} CodeMash. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-gray-500">
             <Link href="/about" className="hover:text-brand-500 transition-colors">

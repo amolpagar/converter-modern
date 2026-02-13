@@ -5,7 +5,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import './globals.css';
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://devtoolbox.com';
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://codemash.pro';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
 
   title: {
-    default: 'DevToolBox — Free Online JSON Formatter, Converter & Developer Tools',
-    template: '%s | DevToolBox',
+    default: 'CodeMash — Free Online JSON Formatter, Converter & Developer Tools',
+    template: '%s | CodeMash',
   },
   description:
     'Free online developer tools: JSON formatter & validator, XML to JSON converter, YAML converter, CSV converter, SQL formatter, Base64 decoder, JWT decoder, URL encoder, hash generator & 25+ more. Fast, private — runs in your browser.',
@@ -48,11 +48,11 @@ export const metadata: Metadata = {
     'css formatter',
     'javascript beautifier',
   ],
-  authors: [{ name: 'DevToolBox' }],
-  creator: 'DevToolBox',
-  publisher: 'DevToolBox',
+  authors: [{ name: 'CodeMash' }],
+  creator: 'CodeMash',
+  publisher: 'CodeMash',
   category: 'Developer Tools',
-  applicationName: 'DevToolBox',
+  applicationName: 'CodeMash',
 
   alternates: {
     canonical: '/',
@@ -62,8 +62,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: '/',
-    siteName: 'DevToolBox',
-    title: 'DevToolBox — Free Online JSON Formatter, Converter & Developer Tools',
+    siteName: 'CodeMash',
+    title: 'CodeMash — Free Online JSON Formatter, Converter & Developer Tools',
     description:
       'JSON formatter, XML/YAML/CSV converters, SQL formatter, Base64 & JWT decoder, hash generator and 25+ free developer tools. Privacy-first, runs in your browser.',
     images: [
@@ -71,14 +71,14 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'DevToolBox — Free Online Developer Tools',
+        alt: 'CodeMash — Free Online Developer Tools',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'DevToolBox — Free Online Developer Tools',
+    title: 'CodeMash — Free Online Developer Tools',
     description:
       'JSON formatter, XML/YAML/CSV converters, SQL formatter, Base64 & JWT decoder and 25+ free tools. Privacy-first.',
     images: ['/og-image.png'],

@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { getToolById, getAllToolIds } from '@/lib/tools';
 import { ToolPage } from '@/components/converter/ToolPage';
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://devtoolbox.com';
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://codemash.pro';
 
 interface PageProps {
   params: { tool: string };
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: tool.seoDescription,
       url: `/${tool.id}`,
       type: 'website',
-      siteName: 'DevToolBox',
+      siteName: 'CodeMash',
       locale: 'en_US',
       images: [
         {
@@ -73,7 +73,7 @@ export default function Page({ params }: PageProps) {
     },
     author: {
       '@type': 'Organization',
-      name: 'DevToolBox',
+      name: 'CodeMash',
       url: APP_URL,
     },
     aggregateRating: undefined as undefined,
@@ -151,7 +151,7 @@ export default function Page({ params }: PageProps) {
     totalTime: 'PT10S',
     tool: {
       '@type': 'HowToTool',
-      name: 'DevToolBox',
+      name: 'CodeMash',
     },
   };
 
