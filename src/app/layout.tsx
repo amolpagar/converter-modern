@@ -102,8 +102,7 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    // google: 'your-google-verification-code',  // Add after Search Console setup
-    // yandex: 'your-yandex-verification-code',
+    google: 'jbU8Blh_H3sQX6zu7PmiFtFmRg8WSd3pS3WUQKUHsWs',
   },
 
   other: {
