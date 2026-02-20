@@ -125,8 +125,8 @@ export default function RootLayout({
           crossOrigin="anonymous"
         /> */}
 
-        {/* Google Analytics — uncomment and add your measurement ID */}
-        {/* <script
+        {/* Google Analytics */}
+        <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
         />
@@ -139,7 +139,7 @@ export default function RootLayout({
               gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
             `,
           }}
-        /> */}
+        />
       </head>
       <body className="min-h-screen flex flex-col">
         <ThemeProvider
