@@ -671,6 +671,64 @@ export async function generateHash(input: string): Promise<string> {
   ].join('\n');
 }
 
+// ─── JSON → M3U / M3U8 Playlist ─────────────────────────────
+
+interface M3uEntry {
+  url: string;
+  title?: string;
+  name?: string;
+  duration?: number;
+  group?: string;
+  logo?: string;
+  tvgId?: string;
+  tvgName?: string;
+  artist?: string;
+}
+
+export function jsonToM3u(input: string): string {
+  if (!input.trim()) throw new Error('Input is empty');
+
+  const parsed = safeJsonParse(input);
+  const entries: M3uEntry[] = Array.isArray(parsed) ? parsed : [parsed];
+
+  if (entries.length === 0) throw new Error('JSON array is empty');
+
+  const lines: string[] = ['#EXTM3U'];
+
+  for (const entry of entries) {
+    if (!entry || typeof entry !== 'object') {
+      throw new Error('Each entry must be a JSON object with at least a "url" field');
+    }
+
+    const url = entry.url;
+    if (!url || typeof url !== 'string') {
+      throw new Error('Each entry must have a "url" string field');
+    }
+
+    const title = entry.title ?? entry.name ?? 'Unknown';
+    const duration = typeof entry.duration === 'number' ? Math.round(entry.duration) : -1;
+
+    // Build EXTINF attributes for IPTV extended format
+    const attrs: string[] = [];
+    if (entry.tvgId) attrs.push(`tvg-id="${entry.tvgId}"`);
+    if (entry.tvgName ?? entry.name) attrs.push(`tvg-name="${entry.tvgName ?? entry.name}"`);
+    if (entry.logo) attrs.push(`tvg-logo="${entry.logo}"`);
+    if (entry.group) attrs.push(`group-title="${entry.group}"`);
+
+    const attrStr = attrs.length > 0 ? ` ${attrs.join(' ')}` : '';
+    lines.push(`#EXTINF:${duration}${attrStr},${title}`);
+
+    // Optional artist line for music playlists
+    if (entry.artist) {
+      lines.push(`#EXTVLCOPT:meta-artist=${entry.artist}`);
+    }
+
+    lines.push(url);
+  }
+
+  return lines.join('\n');
+}
+
 // ─── Number Base Converter ───────────────────────────────────
 
 export function numberBaseConvert(input: string): string {

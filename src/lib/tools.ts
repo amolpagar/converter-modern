@@ -331,6 +331,53 @@ html(lang="en")
     ],
   },
 
+  'json-to-m3u': {
+    id: 'json-to-m3u',
+    title: 'JSON to M3U Playlist Converter Online — Free',
+    shortTitle: 'JSON → M3U',
+    description: 'Convert JSON data to M3U/M3U8 playlist format. Supports music playlists and IPTV streams with extended attributes.',
+    seoDescription: 'Free online JSON to M3U converter. Transform JSON arrays into M3U/M3U8 playlist files for music players and IPTV. Supports extended EXTINF attributes: group-title, tvg-id, tvg-logo, duration, and more. Generate M3U playlists from JSON instantly.',
+    category: 'converter',
+    layout: 'converter',
+    inputLanguage: 'json',
+    outputLanguage: 'text',
+    inputPlaceholder: `[
+  {
+    "title": "Bohemian Rhapsody",
+    "artist": "Queen",
+    "duration": 354,
+    "url": "https://example.com/music/bohemian-rhapsody.mp3"
+  },
+  {
+    "name": "BBC News",
+    "url": "https://stream.example.com/bbc-news",
+    "group": "News",
+    "logo": "https://example.com/logos/bbc.png",
+    "tvgId": "bbc.news.uk",
+    "duration": -1
+  },
+  {
+    "title": "Chill Vibes Radio",
+    "url": "https://stream.example.com/chill",
+    "group": "Music",
+    "duration": -1
+  }
+]`,
+    outputPlaceholder: 'Generated M3U playlist will appear here...',
+    icon: 'ListMusic',
+    gradient: 'from-purple-500 to-indigo-500',
+    keywords: ['json to m3u', 'json to m3u8', 'm3u generator', 'm3u converter', 'json to playlist', 'iptv playlist generator', 'm3u8 converter', 'create m3u playlist', 'json to m3u online', 'playlist converter'],
+    showIndent: false,
+    relatedTools: ['json-to-csv', 'json-to-xml', 'json-to-yaml', 'text-to-json'],
+    faqs: [
+      { question: 'What is an M3U/M3U8 file?', answer: 'M3U (Moving Picture Experts Group Audio Layer 3 URL) is a playlist file format that stores a list of media file locations. M3U8 is the UTF-8 encoded version. Both are widely used by music players (VLC, Winamp) and IPTV applications.' },
+      { question: 'What JSON fields are supported?', answer: 'The converter supports: "url" (required), "title"/"name" (display name), "duration" (in seconds, use -1 for streams), "group" (maps to group-title for IPTV), "logo" (tvg-logo), "tvgId" (tvg-id), "tvgName" (tvg-name), and "artist" (adds EXTVLCOPT metadata for music).' },
+      { question: 'How do I use the generated M3U file?', answer: 'Copy the output and save it as a .m3u or .m3u8 file. Open it in VLC, Kodi, MPV, or any IPTV player. For IPTV, use it as a playlist URL in your IPTV application.' },
+      { question: 'What duration value should I use for live streams?', answer: 'For live streams and radio stations, set "duration" to -1. This tells media players that the stream has no fixed end time. For music files, provide the actual duration in seconds.' },
+      { question: 'Can I use this for IPTV playlists?', answer: 'Yes! Add "group", "logo", "tvgId", and "tvgName" fields to your JSON objects to generate IPTV-compatible M3U playlists with all extended attributes that IPTV players like TiviMate, IPTV Smarters, and Kodi recognize.' },
+    ],
+  },
+
   'text-to-json': {
     id: 'text-to-json',
     title: 'Text to JSON Converter Online — Free',
